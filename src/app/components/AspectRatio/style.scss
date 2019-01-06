@@ -1,0 +1,7 @@
+[data-component="AspectRatio"] {
+    overflow: hidden;
+
+    & > * {
+        display: block !important;
+    }
+}

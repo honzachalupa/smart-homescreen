@@ -1,0 +1,66 @@
+@import './../../_globals';
+
+[data-component="Search"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+
+    .search-box {
+        @extend .semi-transparent;
+
+        border-radius: $borderRadius;
+        overflow: hidden;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 499px) {
+            width: 100%;
+        }
+        @media (min-width: 500px) {
+            width: 400px;
+        }
+
+        .icon {
+            width: 20px;
+        }
+
+        .query {
+            flex-basis: 100%;
+            background-color: transparent;
+            border: none;
+            padding: 10px 0 9px 10px;
+        }
+    }
+
+    .providers {
+        display: flex;
+        padding: 12px;
+
+        .provider {
+            @extend .semi-transparent;
+
+            width: 80px;
+            border-radius: $borderRadius;
+            padding: 10px;
+            margin: 0 5px;
+            transition: background-color 250ms;
+
+            .icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .label {
+                font-size: 0.8rem;
+                margin-top: 5px;
+            }
+
+            &:hover {
+                background-color: white;
+                font-weight: 800;
+            }
+        }
+    }
+}

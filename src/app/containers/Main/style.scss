@@ -1,0 +1,40 @@
+@import './../../_globals';
+
+[data-component="MainContainer"] {
+    padding: 8px;
+    display: flex;
+
+    &.narrow {
+        padding: 10px 12px;
+    }
+
+    .border {
+        @extend .semi-transparent;
+
+        width: 100%;
+        border-radius: $borderRadius;
+        overflow: hidden;
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                width: 20px;
+                margin-right: 6px;
+            }
+
+            .label {
+                font-size: 12px;
+                margin-top: 1px;
+            }
+        }
+
+        .content {
+            padding: 12px;
+        }
+    }
+}

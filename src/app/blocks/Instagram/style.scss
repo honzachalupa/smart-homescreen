@@ -1,0 +1,95 @@
+@import './../../_globals';
+
+[data-component="Instagram"] {
+    display: flex;
+    align-items: center;
+
+    .followers-count {
+        width: 25%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .value {
+            font-size: 3rem;
+            font-weight: 100;
+            white-space: nowrap;
+        }
+
+        .label {
+            margin-top: 5px;
+        }
+    }
+
+    .posts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 0;
+
+        .post-container {
+            @media (max-width: 499px) {
+                width: calc(100% / 2 - 10px);
+
+                &:nth-of-type(n+3) {
+                    display: none;
+                }
+            }
+            @media (min-width: 500px) AND (max-width: 699px) {
+                width: calc(100% / 3 - 10px);
+
+                &:nth-of-type(n+4) {
+                    display: none;
+                }
+            }
+            @media (min-width: 700px) AND (max-width: 899px) {
+                width: calc(100% / 4 - 10px);
+
+                &:nth-of-type(n+5) {
+                    display: none;
+                }
+            }
+            @media (min-width: 900px) {
+                width: calc(100% / 5 - 10px);
+            }
+
+            .post {
+                width: 100%;
+                color: inherit;
+                text-decoration: none;
+
+                .preview {
+                    width: 100%;
+                    border-radius: $borderRadius;
+                    overflow: hidden;
+                }
+
+                .likes-count {
+                    @extend .semi-transparent;
+
+                    background-color: rgba(255, 255, 255, 0.8);
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 8px;
+                    float: right;
+                    position: relative;
+                    top: -34px;
+                    border-top-left-radius: $borderRadius;
+                    border-bottom-right-radius: $borderRadius;
+
+                    .icon {
+                        width: 22px;
+                    }
+
+                    .value {
+                        color: #ff3450;
+                        font-size: 1rem;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

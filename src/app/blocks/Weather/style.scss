@@ -1,0 +1,46 @@
+[data-component="Weather"] {
+    display: flex;
+    align-items: center;
+
+    .current {
+        width: 25%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .temperature {
+            font-size: 3rem;
+            font-weight: 100;
+            white-space: nowrap;
+        }
+
+        .label {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+    }
+
+    .chart {
+        width: 100%;
+        overflow: hidden;
+
+        .legend {
+            display: flex;
+            justify-content: center;
+
+            p {
+                font-size: 0.8rem;
+                padding: 10px 20px;
+            }
+        }
+
+        canvas {
+            $height: 15vh;
+
+            height: $height;
+            min-height: $height;
+            max-height: $height;
+        }
+    }
+}

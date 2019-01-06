@@ -1,0 +1,42 @@
+@import 'css-reset-and-normalize-sass/scss/flavored-reset-and-normalize';
+@import './_globals';
+
+* {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    -webkit-user-drag: none;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+html {
+    @media (max-width: 499px) {
+        font-size: 11px;
+    }
+    @media (min-width: 500px) AND (max-width: 699px) {
+        font-size: 12px;
+    }
+    @media (min-width: 700px) AND (max-width: 899px) {
+        font-size: 14px;
+    }
+    @media (min-width: 900px) {
+        font-size: 16px;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: $background-color;
+
+        input {
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                appearance: none;
+            }
+        }
+    }
+}
